@@ -1,0 +1,210 @@
+
+
+:root{
+   --bg1: #100E1D;
+   --bg2: #1E213A;
+   --g1:  #6E707A;
+   --g2:  #585676;
+   --l1:   #E7E7EB;
+   --l2:  #A09FB1;
+
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Raleway', sans-serif;
+   box-sizing: border-box;
+}
+
+button, a{
+   all: unset;
+   cursor: pointer;
+
+}
+
+.container{
+   display: flex;
+   flex-direction: row;
+   max-width: 100vw;
+   min-height: 100dvh;
+   overflow-x: hidden;
+}
+
+
+.container .side{
+   height: 100%;
+   width: clamp(300px, 25vw, 700px);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   /* align-items: center; */
+   padding: 3rem;
+   background: var(--bg2);
+   position: fixed;
+   top: 0;
+   float: right;
+}
+
+.container .side .top{
+   display: flex;
+   justify-content: space-between;
+   color: white;
+   
+}
+
+
+.container .side .top button{
+   background: var(--g1);
+   padding: 1rem;
+}
+.container .side .top button.getLocation{
+   border-radius: 100vmax;
+}
+.container .side .center{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3rem;
+}
+
+.container .side .center .text{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3rem;
+}
+
+
+.container .side .center .text .temp {
+   font-size: 2rem;
+   color: var(--l2);
+}
+
+.container .side .center .text .temp span{
+   font-size: 5rem;
+   color: var(--l1);
+   font-weight: 600;
+}
+
+.container .side .center .text .condition{
+   color: var(--l2);
+   font-size: 2rem;
+}
+
+.container .side .bottom {
+   display: flex;
+   color: var(--l2);
+   flex-direction: column;
+   align-items: center;
+}
+
+.container .side .bottom p{
+   text-transform: capitalize;
+}
+
+
+
+.container .middle{
+   background: var(--bg1);
+   width: 100%;
+   color: var(--l1);
+   padding: 2rem 10rem;
+   margin-left: clamp(300px, 25vw, 700px);
+   overflow-x: hidden;
+   box-sizing: border-box;
+}
+
+.container .middle .unitsSwitch{
+   padding: 2rem;
+   text-align: end;
+}
+.container .middle .unitsSwitch button{
+   padding: 1rem;
+   background: var(--g2);
+   color: var(--l1);
+   border-radius: 100vmax;
+}
+
+.container .middle .unitsSwitch button.active{
+   background: var(--l1);
+   color: var(--g2);
+}
+
+.container .middle .top {
+   margin-bottom: 4rem;
+}
+
+.container .middle .top .daysContainer{
+   max-width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.container .middle .top .day{
+   background: var(--bg2);
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+
+}
+.container .middle .top .day img{
+   max-width: 100px;
+   margin-bottom: 1rem;
+}
+
+.container .middle .top .day .date{
+   text-transform: capitalize;
+   font-weight: 500;
+}
+
+.container .middle .top .day .temp{
+   display: flex; 
+   justify-content: space-around;
+   width: 100%;
+   font-size: 1rem;
+   gap: 1rem;
+}
+
+.container .middle .top .day .temp .min{
+   color: var(--l2);
+}
+
+
+.container .middle .gridContainer{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-top: 2rem;
+   gap: 3rem;
+
+}
+
+.container .middle .gridContainer > div{
+   background: var(--bg2);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 1rem 3rem;
+}
+
+.container .middle .gridContainer > div p:not(.cardTitle){
+   font-size: 3rem;
+   margin: 1rem 0;
+}
+
+.humidity .range{
+   width: 100%;
+   height: 5px;
+   position: relative;
+   background: white;
+}
+.humidity .range .fill{
+   position: absolute;
+   left: 0;
+   width: 50%;
+   height: 100%;
+   background: yellow;
+}
